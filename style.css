@@ -1,36 +1,82 @@
 *{
-  font-family:  Georgia, serif ;
+  font-family:  'Poppins', sans-serif;
+  box-sizing: border-box;
   margin: 0 ;
   padding: 0;
 }
-body{
-  background-color:#a06969;
+
+.contaniar{
+  width: 100%;
+  min-height: 100vh;
+  background: rgb(145,104,122);
+  background: radial-gradient(circle, rgba(145,104,122,1) 32%, rgba(50,51,84,1) 88%);
+  padding: 10px;
+
+}
+
+.todo-list h2{
+  align-items: center;
+  color: #323354;
+  display:flex ;
+  margin-bottom: 20px;
+
+
+}
+
+.todo-list{
+  width: 100%;
+  max-width: 540px;
+  background-color: white;
+  margin: 100px auto 20px;
+  padding: 40px 30px 70px;
+  border-radius: 50px;
+
+
+}
+
+.row{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #edeef0;
+  border-radius: 30px;
+  padding-left: 20px;
+  margin-bottom: 25px ;
+
+}
+
+input{
+  flex:1 ;
+  border: none;
+  outline: none;
+  background: transparent;
+  padding: 20px;
+  font-weight: 14px;
+
+}
+
+button{
+
+  border-style:double;
+  outline: none;
+  padding: 10px 50px;
+  background:#91687a ;
+  border-radius: 20px;
   color: white;
+  font-size: 14px;
+  cursor:pointer;
+  margin-right: 10px;
+  border-color: white;
   
 }
 
-h1{
-  text-align: center;
-  font-size: 50;
-  padding-top: 5%;
-  margin-bottom: 30px;
+ul li{
+  list-style: none;
+  font-size:17px ;
+  padding: 12px 8px 12px 50px;
+  font-family: 'Fantasy';
 }
 
-.task{
-  border-radius: 25px;
-  border: 2px solid #201515;
-  padding: 20px; 
-  width: 500px;
-  height: 30px;
-  background: rgba( 32, 21, 21, 0.8 );
-box-shadow: 0 8px 32px 0 rgba(199, 153, 153, 0.37);
-border-radius: 10px;
-border: 1px solid rgba( 255, 255, 255, 0.18 );
-  color: white ;
-  text-align: center;
-  font-weight: bold;
-  margin: auto;
-  margin-bottom: 30px;
-
+button:hover {
+  background-color: #746279;
 }
-

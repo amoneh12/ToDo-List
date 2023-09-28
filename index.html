@@ -4,20 +4,25 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ToDo List</title>
-
   <link rel="stylesheet" href="style.css"/>
   <script defer src="main.js"></script>
 </head>
+<body> <!-- Add the opening <body> tag here -->
 
-  <h1>My ToDo List</h1>
-  
-  <div class="task">
-    <p>Task1</p>
-  </div>
+<div class="contaniar">
+    <div class="todo-list">
+        <h2>My Todo List</h2>
+        <div class="row"> <!-- Use class instead of id for the "row" element -->
+          <input type="text" id="input-box" placeholder="Your Task">
+          <button onclick="addTask()">Add Task</button>
+        </div>
+        <ul id="List-container">
+          <li>Task 1</li>
+          <li>Task 2</li>
+          <li>Task 3</li>
+        </ul>
+    </div>
+</div>
 
-  <div class="task">
-    <p>Task2</p>
-  </div>
-
-</body>
+</body> <!-- Add the closing </body> tag here -->
 </html>
