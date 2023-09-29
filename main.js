@@ -1,12 +1,38 @@
-function addTask() {
-  const inputBox = document.getElementById("input-box");
-  const taskText = inputBox.value;
-
-  if (taskText.trim() !== "") {
-    const listContainer = document.getElementById("List-container");
-    const listItem = document.createElement("li");
-    listItem.textContent = taskText;
-    listContainer.appendChild(listItem);
-    inputBox.value = ""; // Clear the input box after adding the task
+const inputBox = document.getElementById("input-box");
+const listContainer = document.getElementById("List-container");
+function addTask(){
+  if (inputBox.value === '') {
+    alert("You must write your task!");
   }
+
+  else{
+    let li = document.createElement("li");
+    li.innerHTML= inputBox.value;
+    listContainer.appendChild(li);
+    let span =document.createElement("span");
+    span.innerHTML="\u00d7";
+    li.appendChild(span);
+  }
+  inputBox.value = '';
+  saveData();
+
 }
+
+listContainer.addEventListener("click", function(e){
+  if(e.target.tagName ==="LI"){
+    e.target.classList.toggle("checked");
+  }
+  else if(e.target.tagName === "SPAN"){
+    e.target.parentElement.remove();
+  }
+},false);
+
+function saveData() {
+  localStorage.setItem("data", listContainer.innerHTML);
+  
+}
+
+function showTask() {
+  listContainer.innerHTML= localStorage.getItem("data")
+}
+showTask();
